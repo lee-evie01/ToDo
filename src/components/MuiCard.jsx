@@ -7,7 +7,7 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import MuiTextfield from "./MuiTextfield";
 // import MuiDate from './MuiDate';
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const bull = (
   <Box
@@ -21,6 +21,10 @@ const bull = (
 export default function MuiCard() {
   const [create, setCreate] = useState("");
   const [val, setVal] = useState("");
+
+  useEffect(() => {
+    console.log(val);
+  }, [val]);
 
   return (
     <Card sx={{ minWidth: 275 }}>
